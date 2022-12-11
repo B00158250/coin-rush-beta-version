@@ -12,7 +12,7 @@ public class HeadupDisplay : MonoBehaviour
     public TMP_Text timeLeftText;
     public TMP_Text totalTimeText;
     public TMP_Text totalLivesText;
-    private float timeRemaining = 80;
+    private float timeRemaining = 5;
     private float totalTime = 0;
 
     // time until headupdisplay should appear

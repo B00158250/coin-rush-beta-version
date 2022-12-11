@@ -3962,6 +3962,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6416425098950015123, guid: f3b91a1b9d3bd0f41af30fd573263395, type: 3}
   m_PrefabInstance: {fileID: 784127130}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &809152960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8460521343329377906, guid: 0272d5b08108c7543b70c3ccbcd7249c, type: 3}
+  m_PrefabInstance: {fileID: 833554181}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &810774540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9293,12 +9298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917ab6c66d118c343ad07f81b7c22fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: {fileID: 8115448596588355733, guid: d2f99872a75dc02489eea04ec09fe903, type: 3}
+  coin: {fileID: 0}
   obstacle: {fileID: 8167622648337481148, guid: 2efb4eec86ce5ed4c9511848b694dc0b, type: 3}
-  spawnPositionObjects:
-  - {fileID: 1874523612}
-  - {fileID: 13357987}
-  - {fileID: 230534794}
+  track: {fileID: 809152960}
 --- !u!4 &1830769204
 Transform:
   m_ObjectHideFlags: 0
@@ -10198,8 +10200,6 @@ MonoBehaviour:
   timeLeftText: {fileID: 399391726}
   totalTimeText: {fileID: 1479327088}
   totalLivesText: {fileID: 1953677316}
-  timeRemaining: 20
-  totalTime: 0
 --- !u!114 &1881444901
 MonoBehaviour:
   m_ObjectHideFlags: 0

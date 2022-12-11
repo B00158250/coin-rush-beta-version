@@ -2,6 +2,7 @@
 COMP H2033 - Interactive Multimedia Project / B00158250 Andreas Egger &amp; B00158249 Andreas Gasteiger
 
 ## Github Pages
+- https://b00158250.github.io/coin-rush-beta-version/
 
 
 ## Third-Party Resources

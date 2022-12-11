@@ -3625,12 +3625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917ab6c66d118c343ad07f81b7c22fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: {fileID: 8115448596588355733, guid: d2f99872a75dc02489eea04ec09fe903, type: 3}
-  obstacle: {fileID: 8167622648337481148, guid: 2efb4eec86ce5ed4c9511848b694dc0b, type: 3}
-  spawnPositionObjects:
-  - {fileID: 29075032}
-  - {fileID: 1172136178}
-  - {fileID: 449298030}
+  mesh: {fileID: 1693178861222281948, guid: 3300383886eb02f448192410b7787ff0, type: 3}
+  y_amount: 1
 --- !u!4 &751042561
 Transform:
   m_ObjectHideFlags: 0
@@ -4448,8 +4444,6 @@ MonoBehaviour:
   timeLeftText: {fileID: 527670549}
   totalTimeText: {fileID: 963636983}
   totalLivesText: {fileID: 2079357959}
-  timeRemaining: 20
-  totalTime: 0
 --- !u!114 &998896730
 MonoBehaviour:
   m_ObjectHideFlags: 0
