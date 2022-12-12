@@ -5,18 +5,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Navigation : MonoBehaviour
-{
-
-    // scenes need to be loaded
+{  // scenes need to be loaded
     private string ChooseCarScene = "ChooseCar";
     private string StartMenuScene = "StartMenu";
-    private string LeaderboardScene = "Leaderboard";
+    private string ExplanationScene = "Explanation";
     private string ChooseTrack = "ChooseTrack";
     private string Track1PoliceCar = "Track1PoliceCar";
     private string Track1SportsCar = "Track1SportsCar";
     private string Track1Truck = "Track1Truck";
 
- 
+
 
     // store info of menu selected things 
     private static string ChoosenCar = "initial";
@@ -29,9 +27,9 @@ public class Navigation : MonoBehaviour
 
     // track names 
     private string track1 = "Track1";
+    private string track2 = "Track2";
 
-  
- 
+
     public void StartGame()
     {
         SceneManager.LoadScene(ChooseCarScene);
@@ -45,9 +43,9 @@ public class Navigation : MonoBehaviour
         SceneManager.LoadScene(StartMenuScene);
     }
 
-    public void Leaderboard()
+    public void Explanation()
     {
-        SceneManager.LoadScene(LeaderboardScene);
+        SceneManager.LoadScene(ExplanationScene);
     }
 
 
@@ -74,16 +72,21 @@ public class Navigation : MonoBehaviour
     // choose track menu
     public void FurtherTrack1()
     {
-       ChoosenTrack = track1;
-       LoadGameScene(ChoosenCar, ChoosenTrack);
+        ChoosenTrack = track1;
+        LoadGameScene(ChoosenCar, ChoosenTrack);
+    }
+
+    public void FurtherTrack2()
+    {
+        ChoosenTrack = track2;
+        LoadGameScene(ChoosenCar, ChoosenTrack);
     }
 
 
-    
     // this function loads the gamescenen based on the options made in the menu / choose car & track
     public void LoadGameScene(string choosenCar, string choosenTrack)
     {
-        if(choosenCar == policeCar && choosenTrack == track1)
+        if (choosenCar == policeCar && choosenTrack == track1)
         {
 
             Debug.Log(choosenCar + " " + choosenTrack);
