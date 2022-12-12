@@ -12,8 +12,9 @@ public class HeadupDisplay : MonoBehaviour
     public TMP_Text timeLeftText;
     public TMP_Text totalTimeText;
     public TMP_Text totalLivesText;
-    private float timeRemaining = 5;
-    private float totalTime = 0;
+    public static float timeRemaining = 30f;
+    public static float totalTime = 0;
+    public static int lives = 10;
 
     // time until headupdisplay should appear
     private float appearTime = 5.0f;
@@ -25,7 +26,7 @@ public class HeadupDisplay : MonoBehaviour
 
         if (appearTime < 0)
         {
-            totalLivesText.text = "Total Lives: 10";
+            totalLivesText.text = "Total Lives:" + lives;
             backGround.color = Color.white;
 
             if (timeRemaining > 0)
@@ -43,6 +44,11 @@ public class HeadupDisplay : MonoBehaviour
             totalTime += Time.deltaTime;
             totalTimeText.text = "Total Time: " + totalTime;
 
+        }
+
+        if (lives <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 

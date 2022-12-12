@@ -11,14 +11,11 @@ public class Navigation : MonoBehaviour
     private string ChooseCarScene = "ChooseCar";
     private string StartMenuScene = "StartMenu";
     private string LeaderboardScene = "Leaderboard";
-    private string ExplanationScene = "Explanation";
     private string ChooseTrack = "ChooseTrack";
     private string Track1PoliceCar = "Track1PoliceCar";
     private string Track1SportsCar = "Track1SportsCar";
     private string Track1Truck = "Track1Truck";
-    private string Track2PoliceCar = "Track2PoliceCar";
-    private string Track2SportsCar = "Track2SportsCar";
-    private string Track2Truck = "Track2Truck";
+
  
 
     // store info of menu selected things 
@@ -32,7 +29,7 @@ public class Navigation : MonoBehaviour
 
     // track names 
     private string track1 = "Track1";
-    private string track2 = "Track2";
+
   
  
     public void StartGame()
@@ -51,11 +48,6 @@ public class Navigation : MonoBehaviour
     public void Leaderboard()
     {
         SceneManager.LoadScene(LeaderboardScene);
-    }
-
-    public void Explanation()
-    {
-        SceneManager.LoadScene(ExplanationScene);
     }
 
 
@@ -86,11 +78,6 @@ public class Navigation : MonoBehaviour
        LoadGameScene(ChoosenCar, ChoosenTrack);
     }
 
-    public void FurtherTrack2()
-    {
-        ChoosenTrack = track2;
-        LoadGameScene(ChoosenCar, ChoosenTrack);
-    }
 
     
     // this function loads the gamescenen based on the options made in the menu / choose car & track
@@ -113,22 +100,6 @@ public class Navigation : MonoBehaviour
             SceneManager.LoadScene(Track1SportsCar);
         }
 
-        else if(choosenCar == policeCar && choosenTrack == track2)
-        {
-
-            Debug.Log(choosenCar + " " + choosenTrack);
-            SceneManager.LoadScene(Track2PoliceCar);
-        }
-        else if (choosenCar == truck && choosenTrack == track2)
-        {
-            Debug.Log(choosenCar + " " + choosenTrack);
-            SceneManager.LoadScene(Track2Truck);
-        }
-        else if (choosenCar == sportsCar && choosenTrack == track2)
-        {
-            Debug.Log(choosenCar + " " + choosenTrack);
-            SceneManager.LoadScene(Track2SportsCar);
-        }
     }
 
 }

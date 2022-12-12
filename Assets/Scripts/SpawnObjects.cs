@@ -3,33 +3,65 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SpawnObjects : MonoBehaviour
 {
 
-
-     public GameObject coin;
-     public GameObject obstacle;
-    public GameObject track;
-
-  
+    public GameObject box;
+    public GameObject cone;
+    public GameObject coin;
 
 
-     void Start()
-     {
+    void Start()
+    {
 
-      // Debug.Log(track.GetComponent<MeshFilter>().mesh.vertices.Length);
+        GenerateCoinsOnRandomPossition(coin, 30);
+        GenerateObstaclesOnRandomPossition(box, 50);
+        GenerateObstaclesOnRandomPossition(cone, 50);
 
-        
-        for (int x = 0; x < 4; x++)        {
-            Vector3 randomPosition = transform.transform.position;
-            Instantiate(obstacle, randomPosition, Quaternion.identity);
+
+    }
+
+    public static void GenerateCoinsOnRandomPossition(GameObject coin, int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            Vector3 randPos = GetRandomLocation();
+            randPos.y += 1;
+            Quaternion rotation = Quaternion.Euler(0f, 0f, 90f);
+            Instantiate(coin, randPos, rotation);
         }
-        
+    }
+
+    public static void GenerateObstaclesOnRandomPossition(GameObject obstacle, int amount)
+    {
+
+        for (int i = 0; i < amount; i++)
+        {
+            Vector3 randPos = GetRandomLocation();
+            Instantiate(obstacle, randPos, Quaternion.identity);
+            Debug.Log(randPos);
+        }
+
+    }
+
+    public static Vector3 GetRandomLocation()
+    {
+        NavMeshTriangulation navMeshData = NavMesh.CalculateTriangulation();
+
+        // Pick the first indice of a random triangle in the nav mesh
+        int t = Random.Range(0, navMeshData.indices.Length - 3);
+
+        // Select a random point on it
+        Vector3 point = Vector3.Lerp(navMeshData.vertices[navMeshData.indices[t]], navMeshData.vertices[navMeshData.indices[t + 1]], Random.value);
+        Vector3.Lerp(point, navMeshData.vertices[navMeshData.indices[t + 2]], Random.value);
+
+        return point;
     }
 
 
-    
+
 }
 
 

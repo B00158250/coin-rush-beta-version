@@ -14,3 +14,9 @@ COMP H2033 - Interactive Multimedia Project / B00158250 Andreas Egger &amp; B001
 
 ### Cartoon Sports Car
 - https://assetstore.unity.com/packages/3d/vehicles/land/cartoon-sports-car-115010
+
+### Coin Asset
+- https://assetstore.unity.com/packages/3d/props/old-coin-49530
+
+### Obstacles
+- https://learn.unity.com/project/unit-1-driving-simulation?uv=2020.3&courseId=5cf96c41edbc2a2ca6e8810f
