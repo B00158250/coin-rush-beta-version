@@ -40,6 +40,7 @@ public class SpawnObjects : MonoBehaviour
         for (int i = 0; i < amount; i++)
         {
             Vector3 randPos = GetRandomLocation();
+            randPos.y += 0.1f;
             Instantiate(obstacle, randPos, Quaternion.identity);
             Debug.Log(randPos);
         }
