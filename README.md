@@ -20,3 +20,7 @@ COMP H2033 - Interactive Multimedia Project / B00158250 Andreas Egger &amp; B001
 
 ### Obstacles
 - https://learn.unity.com/project/unit-1-driving-simulation?uv=2020.3&courseId=5cf96c41edbc2a2ca6e8810f
+
+### Sounds
+- https://freesound.org
+- https://assetstore.unity.com/packages/audio/music/free-music-tracks-for-games-156413

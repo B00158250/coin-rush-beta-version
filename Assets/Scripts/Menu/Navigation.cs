@@ -40,6 +40,10 @@ public class Navigation : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        HeadupDisplay.timeRemaining = 30f;
+        HeadupDisplay.totalTime = 0f;
+        HeadupDisplay.lives = 10;
+        StartLineCollision.roundCounter = -1;
         SceneManager.LoadScene(StartMenuScene);
     }
 

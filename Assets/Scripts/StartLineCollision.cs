@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartLineCollision : MonoBehaviour
 {
 
-    public static int roundCounter = 0;
+    public static int roundCounter = -1;
     public static int amountCoin = 30;
     public static int amountObstacle = 1000;
 
