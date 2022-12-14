@@ -7,7 +7,7 @@ public class StartLineCollision : MonoBehaviour
 
     public static int roundCounter = -1;
     public static int amountCoin = 30;
-    public static int amountObstacle = 1000;
+    public static int amountObstacle = 30;
 
     private bool doSpawn = false;
 
@@ -40,11 +40,11 @@ public class StartLineCollision : MonoBehaviour
 
             doSpawn = false;
 
-            if (roundCounter > 1)
+            if (roundCounter >= 1)
             {
                 SpawnObjects.GenerateCoinsOnRandomPossition(coin, amountCoin / roundCounter);
-                SpawnObjects.GenerateObstaclesOnRandomPossition(box, amountCoin / roundCounter);
-                SpawnObjects.GenerateObstaclesOnRandomPossition(cone, amountCoin * roundCounter);
+                SpawnObjects.GenerateObstaclesOnRandomPossition(box, amountObstacle);
+                SpawnObjects.GenerateObstaclesOnRandomPossition(cone, (amountObstacle / 2));
             }
 
             if (roundCounter <= amountCoin)

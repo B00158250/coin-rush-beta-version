@@ -24,3 +24,9 @@ COMP H2033 - Interactive Multimedia Project / B00158250 Andreas Egger &amp; B001
 ### Sounds
 - https://freesound.org
 - https://assetstore.unity.com/packages/audio/music/free-music-tracks-for-games-156413
+
+### Icons
+- https://www.svgrepo.com
+
+### Effects
+- https://learn.unity.com/tutorial/challenge-3-bouncy-balloons-bombs-and-booleans-1

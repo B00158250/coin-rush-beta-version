@@ -8,7 +8,7 @@ public class ObstacleCollision : MonoBehaviour
 
     private bool decreasLives = true;
 
-    void OnCollisionEnter(Collision collisionInfo)
+    IEnumerator OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Player")
         {
@@ -22,8 +22,10 @@ public class ObstacleCollision : MonoBehaviour
 
                 GetComponent<AudioSource>().Play();
 
+                yield return new WaitForSeconds(10);
+
                 // destroy obstacle
-                Destroy(this.gameObject, 10);
+                Destroy(this.gameObject);
 
                 decreasLives = true;
             }

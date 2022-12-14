@@ -12,6 +12,7 @@ public class HeadupDisplay : MonoBehaviour
     public TMP_Text timeLeftText;
     public TMP_Text totalTimeText;
     public TMP_Text totalLivesText;
+    public TMP_Text rounds;
     public static float timeRemaining = 30f;
     public static float totalTime = 0;
     public static int lives = 10;
@@ -26,23 +27,30 @@ public class HeadupDisplay : MonoBehaviour
 
         if (appearTime < 0)
         {
-            totalLivesText.text = "Total Lives:" + lives;
+            totalLivesText.text = lives.ToString();
             backGround.color = Color.white;
 
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
-                timeLeftText.text = "Time Left: " + timeRemaining;
+                timeLeftText.text = timeRemaining.ToString("00.00");
 
             } else
             {
                 timeRemaining = 0;
-                timeLeftText.text = "Time Left: " + timeRemaining;
+                timeLeftText.text = timeRemaining.ToString("00.00");
                 SceneManager.LoadScene("GameOver");
             }
 
             totalTime += Time.deltaTime;
-            totalTimeText.text = "Total Time: " + totalTime;
+            totalTimeText.text = totalTime.ToString("00.00");
+
+            if (StartLineCollision.roundCounter < 0)
+            {
+                rounds.text = "0";
+            } else {
+                rounds.text = "" + StartLineCollision.roundCounter;
+            }
 
         }
 

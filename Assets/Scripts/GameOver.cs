@@ -13,9 +13,9 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
-        totalTime.text = "Total Time: " + HeadupDisplay.totalTime + " Seconds";
-        lives.text = "Lives left: " + HeadupDisplay.lives;
-        rounds.text = "Rounds done: " + StartLineCollision.roundCounter;
-        timeLeft.text = "Time Left: " + HeadupDisplay.timeRemaining;
+        totalTime.text = HeadupDisplay.totalTime.ToString("00.00");
+        lives.text = HeadupDisplay.lives.ToString();
+        rounds.text = StartLineCollision.roundCounter.ToString();
+        timeLeft.text = HeadupDisplay.timeRemaining.ToString("00.00");
     }
 }
