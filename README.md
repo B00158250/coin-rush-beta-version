@@ -1,5 +1,6 @@
 # Coin Rush Project (Beta Version)
-COMP H2033 - Interactive Multimedia Project / B00158250 Andreas Egger &amp; B00158249 Andreas Gasteiger
+COMP H2033 - Interactive Multimedia Project
+- B00158250 Andreas Egger &amp; B00158249 Andreas Gasteiger
 
 ## Github Pages
 - https://b00158250.github.io/coin-rush-beta-version/
@@ -28,5 +29,5 @@ COMP H2033 - Interactive Multimedia Project / B00158250 Andreas Egger &amp; B001
 ### Icons
 - https://www.svgrepo.com
 
-### Effects
+### Particle Effect
 - https://learn.unity.com/tutorial/challenge-3-bouncy-balloons-bombs-and-booleans-1
